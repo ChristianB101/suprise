@@ -165,57 +165,6 @@
 		
 		<div id="heart-container"></div>
 
-
-    <script>
-        function changeBackground() {
-            document.body.style.backgroundColor = "red"; // Change background to color
-        }
-		
-		 function changeFlowerColor(flower) {
-            // Change the flower color randomly when clicked
-            const colors = ["#ff69b4", "#ff6347", "#ffd700", "#adff2f", "#8a2be2"];
-            const randomColor = colors[Math.floor(Math.random() * colors.length)];
-            flower.style.color = randomColor;
-			
-			} 
-			
-			function changeBackground() {
-    document.body.style.backgroundColor = document.body.style.backgroundColor === "red" ? "green" : "red";
-		
-			}
-			
-			var audio = document.getElementById("bgMusic");
-
-			function playAudio() {
-				audio.play();
-			}
-
-			function pauseAudio() {
-				audio.pause();
-			}
-		
-			function createHeart() {
-				const heart = document.createElement("div");
-				heart.classList.add("heart");
-				heart.innerHTML = "❤️"; // Heart Emoji
-				document.getElementById("heart-container").appendChild(heart);
-
-				// Random positioning
-				heart.style.left = Math.random() * 100 + "vw";
-				heart.style.animationDuration = Math.random() * 3 + 2 + "s"; // 2-5s duration
-
-				// Remove heart after animation
-				setTimeout(() => {
-					heart.remove();
-				}, 5000);
-			}
-
-			// Create hearts when clicking anywhere on the screen
-			document.addEventListener("click", createHeart);
-
-			// Generate hearts at random intervals
-			setInterval(createHeart, 800);
-
-    </script>
 </body>
+
 </html>
